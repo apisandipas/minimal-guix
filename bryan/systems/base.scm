@@ -1,4 +1,4 @@
-(define-module (bryan systems base-system)
+(define-module (bryan systems base)
   #:use-module (gnu)
   #:use-module (srfi srfi-1)
   #:use-module (gnu system nss)

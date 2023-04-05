@@ -1,5 +1,5 @@
 (define-module (bryan systems atlas)
-  #:use-module (bryan systems base-system)
+  #:use-module (bryan systems base)
   #:use-module (gnu))
 
 (operating-system
