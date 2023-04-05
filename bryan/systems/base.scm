@@ -77,9 +77,8 @@ EndSection
 
 (define-public base-operating-system
   (operating-system
-    (host-name "hackstock")
-    ;(timezone "America/Los_Angeles")
-    (timezone "Europe/Athens")
+    (host-name "gnu")
+    (timezone "America/Chicago")
     (locale "en_US.utf8")
 
     ;; Use non-free Linux and firmware
