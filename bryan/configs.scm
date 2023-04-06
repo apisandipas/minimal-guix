@@ -108,7 +108,7 @@
      "ripgrep" "curl"))))
 
 
-(define %abcdw-features
+(define %bryan-features
   (list
    (feature-user-info
     #:user-name "bryan"
@@ -200,7 +200,7 @@
   (rde-config
    (features
     (append
-     ;; %all-features
+     %all-features
      %atlas-features
      %bryan-features))))
 
