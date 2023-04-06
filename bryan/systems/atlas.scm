@@ -12,7 +12,7 @@
           (file-system-label "swap-partition")))))
 
 (define atlas-file-systems
-   (list
+   (cons*
         (file-system
             (device (file-system-label "system-root"))
             (mount-point "/")
@@ -24,8 +24,7 @@
         (file-system
             (device (file-system-label "EFI_PART"))
             (mount-point "/boot/efi")
-            (type "vfat"))
-        %base-file-systems))
+            (type "vfat"))))
 
 (define-public %atlas-features
   (list
