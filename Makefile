@@ -1,4 +1,4 @@
-CONFIG_FILE = ./bryan/reconfigure.scm
+CONFIG_FILE = ./bryan/configs.scm
 HOST=atlas
 RDE_USER=bryan
 GLP=./
