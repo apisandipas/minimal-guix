@@ -200,7 +200,7 @@
   (rde-config
    (features
     (append
-     %all-features
+     ;; %all-features
      %atlas-features
      %bryan-features))))
 
