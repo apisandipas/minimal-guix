@@ -1,7 +1,6 @@
 (define-module (bryan configs)
   #:use-module (bryan feature-lists)
   #:use-module (bryan systems atlas)
-  ;; #:use-module (abcdw hosts live)
 
   #:use-module (rde features)
   #:use-module (rde features base)

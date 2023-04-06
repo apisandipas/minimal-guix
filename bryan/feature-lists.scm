@@ -25,7 +25,8 @@
   #:use-module (rde features tmux)
   #:use-module (rde features ssh)
 
-  #:use-module (guix gexp))
+  #:use-module (guix gexp)
+  #:export (%all-features))
 
 (define-public %base-features
   (list
