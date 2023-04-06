@@ -12,7 +12,7 @@
           (file-system-label "swap-partition")))))
 
 (define atlas-file-systems
-   (cons*
+   (list
         (file-system
             (device (file-system-label "system-root"))
             (mount-point "/")
@@ -33,5 +33,5 @@
     #:timezone  "America/Chicago")
    (feature-file-systems
     ;; #:mapped-devices atlas-mapped-devices
-    #:swap-devices atlas-swap-devices
+    ;; #:swap-devices atlas-swap-devices
     #:file-systems atlas-file-systems)))
