@@ -28,7 +28,7 @@
                 (targets '("/boot/efi"))))
 
   (swap-devices atlas-swap-devices)
-  (file-systems (appead atlas-file-systems
+  (file-systems (append atlas-file-systems
                          %base-file-systems))
 
   ;; This is where user accounts are specified.  The "root"
