@@ -50,10 +50,12 @@
                %base-user-accounts))
 
   ;; Globally-installed packages.
-  (packages (cons screen vim
+  (packages (append
+            (list screen
+                  vim
                   emacs
                   xterm
-                  i3-wm i3status dmenu
+                  i3-wm i3status dmenu)
                   %base-packages))
 
   ;; Add services to the baseline: a DHCP client and
