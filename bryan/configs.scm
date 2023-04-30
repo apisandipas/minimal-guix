@@ -200,8 +200,12 @@
   (rde-config
    (features
     (append
+     (list
+      (feature-base-services)
+      (feature-base-packages)
+      (feature-desktop-services))
      ;; %all-features
-     %general-features
+     ;; %general-features
      ;; %base-features
      %atlas-features
      %bryan-features))))
