@@ -26,7 +26,7 @@
   #:use-module (rde features ssh)
 
   #:use-module (guix gexp)
-  #:export (%all-features))
+  #:export (%all-features %base-features))
 
 (define-public %base-features
   (list
