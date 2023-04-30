@@ -17,54 +17,56 @@
 (use-package-modules screen ssh)
 
 (operating-system
-  (host-name "atlas")
-  (timezone "America/Chicago")
-  (locale "en_US.utf8")
+ (host-name "atlas")
+ (timezone "America/Chicago")
+ (locale "en_US.utf8")
 
-  ;; Use non-free Linux and firmware
-  (kernel linux)
-  (firmware (list linux-firmware))
-  (initrd microcode-initrd)
+ ;; Use non-free Linux and firmware
+ (kernel linux)
+ (firmware (list linux-firmware))
+ (initrd microcode-initrd)
 
-  (bootloader (bootloader-configuration
-                (bootloader grub-efi-bootloader)
-                (targets '("/boot/efi"))))
+ (keyboard-layout (keyboard-layout "us" "ctrl:no_caps"))
 
-  (swap-devices atlas-swap-devices)
-  (file-systems (append atlas-file-systems
-                         %base-file-systems))
+ (bootloader (bootloader-configuration
+              (bootloader grub-efi-bootloader)
+              (targets '("/boot/efi"))))
 
-  ;; This is where user accounts are specified.  The "root"
-  ;; account is implicit, and is initially created with the
-  ;; empty password.
-  (users (cons (user-account
-                (name "bryan")
-                (comment "It's me")
-                (group "users")
-                (password (crypt "bryan" "$6$abc"))
-                ;; Adding the account to the "wheel" group
-                ;; makes it a sudoer.  Adding it to "audio"
-                ;; and "video" allows the user to play sound
-                ;; and access the webcam.
-                (supplementary-groups '("wheel"
-                                        "audio" "video")))
-               %base-user-accounts))
+ (swap-devices atlas-swap-devices)
+ (file-systems (append atlas-file-systems
+                       %base-file-systems))
 
-  ;; Globally-installed packages.
-  (packages (append
+ ;; This is where user accounts are specified.  The "root"
+ ;; account is implicit, and is initially created with the
+ ;; empty password.
+ (users (cons (user-account
+               (name "bryan")
+               (comment "It's me")
+               (group "users")
+               (password (crypt "bryan" "$6$abc"))
+               ;; Adding the account to the "wheel" group
+               ;; makes it a sudoer.  Adding it to "audio"
+               ;; and "video" allows the user to play sound
+               ;; and access the webcam.
+               (supplementary-groups '("wheel"
+                                       "audio" "video")))
+              %base-user-accounts))
+
+ ;; Globally-installed packages.
+ (packages (append
             (list screen
                   vim
                   emacs
                   picom
                   xterm
                   i3-wm i3status dmenu)
-                  %base-packages))
+            %base-packages))
 
-  ;; Add services to the baseline: a DHCP client and
-  ;; an SSH server.
-  (services (append (list (service dhcp-client-service-type)
-                          (service openssh-service-type
-                                   (openssh-configuration
-                                    (openssh openssh-sans-x)
-                                    (port-number 2222))))
-                    %base-services)))
+ ;; Add services to the baseline: a DHCP client and
+ ;; an SSH server.
+ (services (append (list (service xfce-desktop-service-type)
+                         (set-xorg-configuration
+                          (xorg-configuration
+                           (keyboard-layout keyboard-layout))))
+                   %desktop-services
+                   %base-services)))
