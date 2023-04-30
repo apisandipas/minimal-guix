@@ -6,12 +6,12 @@
   #:use-module (gnu system mapped-devices)
   #:use-module (ice-9 match))
 
-(define atlas-swap-devices
+(define-public atlas-swap-devices
   (list (swap-space
          (target
           (file-system-label "swap-partition")))))
 
-(define atlas-file-systems
+(define-public atlas-file-systems
   (list
    (file-system
     (mount-point "/")
