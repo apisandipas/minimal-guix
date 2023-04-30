@@ -108,7 +108,7 @@
     #:enable-zsh-autosuggestions? #t)
    (feature-bash)
    (feature-direnv)
-   (feature-git)
+   ;; (feature-git)
    (feature-ssh)))
 
 (define-public %ui-features
@@ -201,6 +201,7 @@
    %cli-features
    %ui-features
    %emacs-features))
+
 (define emacs-extra-packages-service
   (simple-service
    'emacs-extra-packages
@@ -245,6 +246,7 @@
    home-profile-service-type
    (append
     (strings->packages
+     "git"
      "figlet" ;; TODO: Move to emacs-artist-mode
      "calibre"
      "icecat" "nyxt"
