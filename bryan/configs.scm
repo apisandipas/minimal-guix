@@ -1,6 +1,4 @@
 (define-module (bryan configs)
-  #:use-module (bryan feature-lists)
-  #:use-module (bryan systems atlas)
 
   #:use-module (rde features)
   #:use-module (rde features base)
@@ -36,6 +34,8 @@
   #:use-module (guix channels)
   #:use-module (guix packages)
   #:use-module (guix download)
+  #:use-module (bryan feature-lists)
+  #:use-module (bryan systems atlas)
   #:use-module (ice-9 match))
 
 ;;; Service extensions
