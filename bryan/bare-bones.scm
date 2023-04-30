@@ -6,6 +6,7 @@
   #:use-module (gnu packages xorg)
   #:use-module (gnu packages vim)
   #:use-module (gnu packages emacs)
+  #:use-module (gnu packages suckless)
   #:use-module (gnu services desktop)
   #:use-module (nongnu system linux-initrd)
   #:use-module (nongnu packages linux)
