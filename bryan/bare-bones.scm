@@ -69,5 +69,4 @@
  ;; Add services to the baseline: a DHCP client and
  ;; an SSH server.
  (services (append (list (service xfce-desktop-service-type))
-                   %desktop-services
-                   %base-services)))
+                   %desktop-services)))
