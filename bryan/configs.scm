@@ -74,7 +74,7 @@
    (feature-ungoogled-chromium
     #:default-browser? #t)
    (feature-ledger)
-   (feature-imv)
+   ;; (feature-imv)
    (feature-mpv
     #:extra-mpv-conf '((speed . 1.61)))))
 
