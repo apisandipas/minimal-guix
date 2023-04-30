@@ -203,7 +203,9 @@
      (list
       (feature-base-services)
       (feature-base-packages)
-      (feature-desktop-services))
+      (feature-desktop-services)
+      (feature-networking)
+      )
      ;; %all-features
      ;; %general-features
      ;; %base-features
