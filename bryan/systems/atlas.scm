@@ -9,7 +9,7 @@
 (define atlas-swap-devices
   (list (swap-space
          (target (uuid "5a34d2f3-5eee-4aa1-ad41-96534b4d1880"))
-         (target (file-system-label "swap-partition")
+         ;; (target (file-system-label "swap-partition")
           ))))
 
 (define atlas-file-systems
