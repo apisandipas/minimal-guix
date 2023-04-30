@@ -367,8 +367,8 @@
      ;;  (feature-desktop-services)
      ;;  (feature-networking)
      ;;  )
-      %all-features
-     ;; %general-features
+      ;; %all-features
+     %general-features
      ;; %base-features
      %atlas-features
      %bryan-features))))
