@@ -33,5 +33,5 @@
     #:timezone  "America/Chicago")
    (feature-file-systems
     ;; #:mapped-devices atlas-mapped-devices
-    ;; #:swap-devices atlas-swap-devices
+    #:swap-devices atlas-swap-devices
     #:file-systems atlas-file-systems)))
