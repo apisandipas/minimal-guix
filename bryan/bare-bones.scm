@@ -57,7 +57,7 @@
  ;; Globally-installed packages.
  (packages (append
             (list screen
-                  make
+                  ;; make
                   nss-certs
                   vim
                   emacs
