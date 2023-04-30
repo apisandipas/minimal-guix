@@ -24,3 +24,7 @@ system-init:
 system-minimal:
 	GUILE_LOAD_PATH=$(GLP)  RDE_TARGET=system \
 	guix system init ./bryan/bare-bones.scm /mnt --substitute-urls="https://bordeaux.guix.gnu.org"
+
+system-reconfigure-minimal:
+	GUILE_LOAD_PATH=$(GLP) RDE_TARGET=system \
+	guix system reconfigure ./bryan/bare-bones.scm
