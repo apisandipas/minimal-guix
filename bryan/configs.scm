@@ -9,7 +9,7 @@
   #:use-module (rde features fontutils)
   #:use-module (rde features finance)
   #:use-module (rde features gnupg)
-  #:use-module (rde features image-viewers)
+  ;; #:use-module (rde features image-viewers)
   #:use-module (rde features irc)
   #:use-module (rde features keyboard)
   #:use-module (rde features linux)
