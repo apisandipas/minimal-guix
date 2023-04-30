@@ -1,11 +1,10 @@
-;; This is an operating system configuration template
-;; for a "bare bones" setup, with no X11 display server.
 (define-module (bryan bare-bones)
   #:use-module (gnu)
   #:use-module (gnu packages wm)
   #:use-module (gnu packages base)
   #:use-module (gnu packages certs)
   #:use-module (gnu packages xorg)
+  #:use-module (gnu packages xdisorg)
   #:use-module (gnu packages vim)
   #:use-module (gnu packages compton)
   #:use-module (gnu packages emacs)
@@ -57,16 +56,19 @@
  ;; Globally-installed packages.
  (packages (append
             (list screen
+                  arandr
                   ;; make
                   nss-certs
                   vim
                   emacs
                   picom
                   xterm
+                  sway waybar
                   i3-wm i3status dmenu)
             %base-packages))
 
  ;; Add services to the baseline: a DHCP client and
  ;; an SSH server.
- (services (append (list (service xfce-desktop-service-type))
-                   %desktop-services)))
+ (services (append
+            (list (service xfce-desktop-service-type))
+            %desktop-services)))
