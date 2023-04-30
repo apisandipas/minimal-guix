@@ -1,5 +1,6 @@
 (define-module (bryan bare-bones)
   #:use-module (gnu)
+  #:use-module (srfi srfi-1)
   #:use-module (gnu packages wm)
   #:use-module (gnu packages base)
   #:use-module (gnu packages certs)
