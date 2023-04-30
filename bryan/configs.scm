@@ -70,6 +70,22 @@
    (feature-backlight #:step 10)
    (feature-networking)
 
+   (feature-irc-settings
+    #:irc-accounts (list
+                    (irc-account
+                     (id 'srht)
+                     (network "chat.sr.ht")
+                     (bouncer? #t)
+                     (nick "cablecardigital"))
+                    (irc-account
+                     (id 'libera)
+                     (network "irc.libera.chat")
+                     (nick "cablecardigital"))
+                    (irc-account
+                     (id 'oftc)
+                     (network "irc.oftc.net")
+                     (nick "cablecardigital"))))
+
    (feature-transmission #:auto-start? #f)
    (feature-ungoogled-chromium
     #:default-browser? #t)
