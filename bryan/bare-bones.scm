@@ -76,7 +76,7 @@
             (list (service xfce-desktop-service-type)
                   (service sddm-service-type))
             (remove (lambda (service)
-                      (eq? (service-kink service) gdm-service-type)
-                      %desktop-services))
+                      (eq? (service-kind service) gdm-service-type)
+                      %desktop-services)))
 
-           )))
+           ))
