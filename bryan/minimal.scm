@@ -10,8 +10,8 @@
 (define minimal-rde-config
   (rde-config
    (features
-    %atlas-features
     (list
+      %atlas-features
      (feature-user-info
       #:user-name "bryan"
       #:full-name "Bryan Paronto"
