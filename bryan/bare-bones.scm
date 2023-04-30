@@ -5,6 +5,7 @@
   #:use-module (gnu packages wm)
   #:use-module (gnu packages xorg)
   #:use-module (gnu packages vim)
+  #:use-module (gnu packages compton)
   #:use-module (gnu packages emacs)
   #:use-module (gnu packages suckless)
   #:use-module (gnu services desktop)
@@ -56,7 +57,6 @@
                   emacs
                   picom
                   xterm
-                  kitty
                   i3-wm i3status dmenu)
                   %base-packages))
 
