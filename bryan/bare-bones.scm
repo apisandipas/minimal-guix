@@ -77,6 +77,6 @@
                   (service sddm-service-type))
             (remove (lambda (service)
                       (eq? (service-kink service) gdm-service-type)
-                      %desktop-services)))
+                      %desktop-services))
 
-           ))
+           )))
