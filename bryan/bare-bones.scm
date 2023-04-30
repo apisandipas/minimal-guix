@@ -8,6 +8,7 @@
   #:use-module (gnu packages vim)
   #:use-module (gnu packages compton)
   #:use-module (gnu packages emacs)
+  #:use-module (gnu packages display-managers)
   #:use-module (gnu packages suckless)
   #:use-module (gnu services desktop)
   #:use-module (nongnu system linux-initrd)
@@ -70,5 +71,10 @@
  ;; Add services to the baseline: a DHCP client and
  ;; an SSH server.
  (services (append
-            (list (service xfce-desktop-service-type))
-            %desktop-services)))
+            (list (service xfce-desktop-service-type)
+                  (service sddm-service-type))
+            (remove (lambda (service)
+                      (eq? (service-kink service) gdm-service-type)
+                      %desktop-services)))
+
+           ))
