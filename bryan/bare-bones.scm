@@ -26,7 +26,7 @@
   (initrd microcode-initrd)
 
   (bootloader (bootloader-configuration
-                (bootloader grub-bootloader)
+                (bootloader grub-efi-bootloader)
                 (targets '("/boot/efi"))))
 
   (swap-devices atlas-swap-devices)
