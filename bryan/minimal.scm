@@ -1,7 +1,8 @@
 (define-module (bryan minimal)
   #:use-module (rde features)
   #:use-module (rde features base)
-  #:use-module (rde features shells))
+  #:use-module (rde features shells)
+  #:use-module (bryan systems atlas))
 
 
 ;;; Code:
@@ -9,6 +10,7 @@
 (define minimal-rde-config
   (rde-config
    (features
+    %atlas-features
     (list
      (feature-user-info
       #:user-name "bryan"

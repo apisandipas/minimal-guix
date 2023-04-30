@@ -20,3 +20,7 @@ system-reconfigure:
 system-init:
 	GUILE_LOAD_PATH=$(GLP)  RDE_TARGET=system \
 	guix system init $(CONFIG_FILE) /mnt --substitute-urls="https://bordeaux.guix.gnu.org"
+
+system-minimal:
+	GUILE_LOAD_PATH=$(GLP)  RDE_TARGET=system \
+	guix system init ./bryan/minimal.scm /mnt --substitute-urls="https://bordeaux.guix.gnu.org"
