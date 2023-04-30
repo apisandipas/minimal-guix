@@ -8,7 +8,7 @@
   #:use-module (gnu services desktop)
   #:use-module (nongnu system linux-initrd)
   #:use-module (nongnu packages linux)
-  #:use-module (bryan config atlas))
+  #:use-module (bryan systems atlas))
 
 (use-service-modules networking ssh)
 (use-package-modules screen ssh)
