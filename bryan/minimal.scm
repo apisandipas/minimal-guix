@@ -24,4 +24,5 @@
      )
     )))
 
-(rde-config-home-environment minimal-rde-config)
+;; (rde-config-home-environment minimal-rde-config)
+(rde-config-operating-system minimal-rde-config)
