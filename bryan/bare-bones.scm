@@ -54,7 +54,9 @@
             (list screen
                   vim
                   emacs
+                  picom
                   xterm
+                  kitty
                   i3-wm i3status dmenu)
                   %base-packages))
 
