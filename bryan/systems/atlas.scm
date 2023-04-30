@@ -13,18 +13,19 @@
 
 (define atlas-file-systems
    (list
-        (file-system
-            (device (file-system-label "system-root"))
-            (mount-point "/")
-            (type "ext4"))
-        ;; (file-system
-        ;;     (device (file-system-label "system-home"))
-        ;;     (mount-point "/home")
-        ;;     (type "ext4"))
-        (file-system
-            (device (file-system-label "EFI_PART"))
-            (mount-point "/boot/efi")
-            (type "vfat"))))
+    (file-system
+     (device (file-system-label "system-root"))
+     (mount-point "/")
+     (type "ext4"))
+    (file-system
+        (device (file-system-label "system-home"))
+        (mount-point "/home")
+        (type "ext4"))
+    (file-system
+     (device (file-system-label "EFI_PART"))
+     (mount-point "/boot/efi")
+     (type "vfat"))
+    %base-file-systems))
 
 (define-public %atlas-features
   (list
