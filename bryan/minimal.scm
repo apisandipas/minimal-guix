@@ -10,13 +10,18 @@
 (define minimal-rde-config
   (rde-config
    (features
+    (append
+     %atlas-features
     (list
-      %atlas-features
      (feature-user-info
       #:user-name "bryan"
       #:full-name "Bryan Paronto"
       #:email "bryan@cablecar.digital"
       #:emacs-advanced-user? #t)
-     (feature-zsh)))))
+     (feature-zsh))
+
+
+     )
+    )))
 
 (rde-config-home-environment minimal-rde-config)
