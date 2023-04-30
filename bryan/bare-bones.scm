@@ -2,9 +2,9 @@
 ;; for a "bare bones" setup, with no X11 display server.
 (define-module (bryan bare-bones)
   #:use-module (gnu)
-  #:use-module (gnu system nss)
   #:use-module (gnu packages wm)
-  #:use-module (gnu packages)
+  #:use-module (gnu packages base)
+  #:use-module (gnu packages certs)
   #:use-module (gnu packages xorg)
   #:use-module (gnu packages vim)
   #:use-module (gnu packages compton)
