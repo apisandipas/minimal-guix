@@ -2,7 +2,9 @@
 ;; for a "bare bones" setup, with no X11 display server.
 (define-module (bryan bare-bones)
   #:use-module (gnu)
+  #:use-module (gnu system nss)
   #:use-module (gnu packages wm)
+  #:use-module (gnu packages base)
   #:use-module (gnu packages xorg)
   #:use-module (gnu packages vim)
   #:use-module (gnu packages compton)
@@ -55,6 +57,8 @@
  ;; Globally-installed packages.
  (packages (append
             (list screen
+                  make
+                  nss-certs
                   vim
                   emacs
                   picom
@@ -64,9 +68,6 @@
 
  ;; Add services to the baseline: a DHCP client and
  ;; an SSH server.
- (services (append (list (service xfce-desktop-service-type)
-                         (set-xorg-configuration
-                          (xorg-configuration
-                           (keyboard-layout keyboard-layout))))
+ (services (append (list (service xfce-desktop-service-type))
                    %desktop-services
                    %base-services)))
