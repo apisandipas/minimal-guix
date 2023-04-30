@@ -201,7 +201,8 @@
    (features
     (append
      ;; %all-features
-     %base-features
+     %general-features
+     ;; %base-features
      %atlas-features
      %bryan-features))))
 

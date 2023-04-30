@@ -153,13 +153,13 @@
    (feature-emacs-guix)
    (feature-emacs-eglot)))
 
-;; (define-public %general-features
-;;   (append
-;;    %base-features
-;;    %dev-features
-;;    %cli-features
-;;    %ui-features
-;;    %emacs-features))
+(define-public %general-features
+  (append
+   %base-features
+   %dev-features
+   %cli-features
+   %ui-features
+   %emacs-features))
 
 (define-public %all-features
   (append
