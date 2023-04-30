@@ -12,13 +12,13 @@
    (features
     (append
      %atlas-features
-    (list
-     (feature-user-info
-      #:user-name "bryan"
-      #:full-name "Bryan Paronto"
-      #:email "bryan@cablecar.digital"
-      #:emacs-advanced-user? #t)
-     (feature-zsh))
+     (list
+      (feature-user-info
+       #:user-name "bryan"
+       #:full-name "Bryan Paronto"
+       #:email "bryan@cablecar.digital"
+       #:emacs-advanced-user? #t)
+      (feature-zsh))
 
 
      )
