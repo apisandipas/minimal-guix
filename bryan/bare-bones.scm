@@ -4,7 +4,7 @@
   #:use-module (gnu)
   #:use-module (gnu system nss)
   #:use-module (gnu packages wm)
-  #:use-module (gnu packages base)
+  #:use-module (gnu packages)
   #:use-module (gnu packages xorg)
   #:use-module (gnu packages vim)
   #:use-module (gnu packages compton)
