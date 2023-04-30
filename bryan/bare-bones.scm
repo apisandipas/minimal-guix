@@ -11,7 +11,7 @@
   #:use-module (gnu packages display-managers)
   #:use-module (gnu packages suckless)
   #:use-module (gnu services desktop)
-  #:use-module (gnu services xorg)
+  #:use-module (gnu services sddm)
   #:use-module (nongnu system linux-initrd)
   #:use-module (nongnu packages linux)
   #:use-module (bryan systems atlas))
