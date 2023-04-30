@@ -126,7 +126,7 @@
 
 
    (feature-custom-services
-    #:feature-name-prefix 'abcdw
+    #:feature-name-prefix 'bryan
     #:home-services
     (list
      emacs-extra-packages-service

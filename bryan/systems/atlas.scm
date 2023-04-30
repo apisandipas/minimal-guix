@@ -17,10 +17,10 @@
             (device (file-system-label "system-root"))
             (mount-point "/")
             (type "ext4"))
-        (file-system
-            (device (file-system-label "system-home"))
-            (mount-point "/home")
-            (type "ext4"))
+        ;; (file-system
+        ;;     (device (file-system-label "system-home"))
+        ;;     (mount-point "/home")
+        ;;     (type "ext4"))
         (file-system
             (device (file-system-label "EFI_PART"))
             (mount-point "/boot/efi")
