@@ -9,21 +9,22 @@
 (define atlas-swap-devices
   (list (swap-space
          (target
-          (file-system-label "swap-partition")))))
+          (file-system-label "swap-partition")
+          ))))
 
 (define atlas-file-systems
    (list
     (file-system
-     (device (file-system-label "system-root"))
      (mount-point "/")
+     (device (file-system-label "system-root"))
      (type "ext4"))
     (file-system
-        (device (file-system-label "system-home"))
-        (mount-point "/home")
-        (type "ext4"))
+     (mount-point "/home")
+     (device (file-system-label "system-home"))
+     (type "ext4"))
     (file-system
-     (device (file-system-label "EFI_PART"))
      (mount-point "/boot/efi")
+     (device (file-system-label "EFI_PART"))
      (type "vfat"))))
 
 (define-public %atlas-features
