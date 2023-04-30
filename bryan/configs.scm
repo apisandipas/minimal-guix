@@ -38,6 +38,7 @@
   #:use-module (bryan systems atlas)
   #:use-module (ice-9 match))
 
+(use-modules (bryan feature-lists))
 ;;; Service extensions
 
 (define emacs-extra-packages-service
